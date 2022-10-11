@@ -1,10 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
+//<<<<<<< Updated upstream
 import GlobalStyles from "./GlobalStyles";
 import { Header } from "./components/Header";
 
 const Placeholder = () => <div className="App"></div>;
+//=======
+import { Footer } from "./components/Footer";
+//>>>>>>> Stashed changes
 
 function App() {
   return (
@@ -38,6 +42,7 @@ function App() {
         />
       </Routes>
       {/* TODO: Add site footer component here */}
+      <Footer />
     </>
   );
 }
