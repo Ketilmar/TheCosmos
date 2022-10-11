@@ -5,6 +5,7 @@ import GlobalStyles from "./GlobalStyles";
 import { Header } from "./components/Header";
 
 import BodyPage from "./pages/Body";
+import PlanetsPage from "./pages/Planets";
 
 const Placeholder = () => <div className="App"></div>;
 
@@ -24,7 +25,7 @@ function App() {
         />
         <Route
           path="/planets"
-          element={<Placeholder /> /* TODO: Replace with planets page */}
+          element={<PlanetsPage />}
         />
         <Route
           path="/body/:id"

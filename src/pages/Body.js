@@ -2,21 +2,10 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 
+import { endpoints, colors } from '../constants'
+
 import CelestialObjectSection from '../components/CelestialObjectSection'
 import CelestialObjectCard from '../components/CelestialObjectCard'
-
-// TODO: Move this to a constants file?
-const colors = {
-  mercure: '#FFBFAB',
-  venus:   '#E7F6A7',
-  terre:   '#1E84FD',
-  mars:    '#FD531E',
-  jupiter: '#FF9E44',
-  saturne: '#F5D86D',
-  uranus:  '#CBFFF3',
-  neptune: '#2CD8FE',
-  moon:    '#A7A7A7'
-}
 
 const BodyPage = () => {
   const [ isLoading, setIsLoading ] = useState(false)
@@ -27,7 +16,7 @@ const BodyPage = () => {
     setIsLoading(true)
 
     try {
-      const data = await fetch(`https://api.le-systeme-solaire.net/rest/bodies/${params.id}`).then(res => res.json())
+      const data = await fetch(`${endpoints.bodies}/${params.id}`).then(res => res.json())
       setData(data)
 
     } catch (err) {
