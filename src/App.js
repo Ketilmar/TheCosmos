@@ -7,11 +7,14 @@ import { Header } from "./components/Header";
 
 import BodyPage from "./pages/Body";
 import PlanetsPage from "./pages/Planets";
+<<<<<<< Updated upstream
 import NotFoundPage from "./pages/NotFound";
+=======
+import { Footer } from "./components/Footer";
+>>>>>>> Stashed changes
 
 const Placeholder = () => <div className="App"></div>;
 //=======
-import { Footer } from "./components/Footer";
 //>>>>>>> Stashed changes
 
 function App() {
@@ -28,14 +31,8 @@ function App() {
           path="/"
           element={<Placeholder /> /* TODO: Replace with landing page */}
         />
-        <Route
-          path="/planets"
-          element={<PlanetsPage />}
-        />
-        <Route
-          path="/body/:id"
-          element={<BodyPage />}
-        />
+        <Route path="/planets" element={<PlanetsPage />} />
+        <Route path="/body/:id" element={<BodyPage />} />
         <Route
           path="/about"
           element={<Placeholder /> /* TODO: Replace with about page */}

@@ -5,7 +5,6 @@ import {
   FooterP,
   HeaderFooterP,
   StyledFooterColumn,
-  StyledFooterDiv,
   StyledFooterRow,
   StyledFooterSection,
 } from "./StyledFooter";
@@ -51,7 +50,7 @@ export const Footer = () => {
         <FooterP bottom>
           Copyright 2022 The Solar System, All rights reserved.
         </FooterP>
-        <StyledFooterRow>
+        <StyledFooterRow bottomDiv>
           <FooterP bottom>Terms of Service</FooterP>
           <FooterP bottom>Privacy Policy</FooterP>
         </StyledFooterRow>

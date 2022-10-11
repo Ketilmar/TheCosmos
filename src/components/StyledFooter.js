@@ -7,33 +7,44 @@ export const StyledFooterColumn = styled.div`
   gap: 1.21875em;
 `;
 
-export const StyledFooterSection = styled.div`
+export const StyledFooterSection = styled.section`
   display: flex;
   flex-direction: column;
   bottom: 0;
-  position: fixed;
   width: 100%;
+  background-color: #0f131f;
 `;
 
 export const StyledFooterRow = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 8.3125em;
+  @media (max-width: 811px) {
+    gap: 1.5625em;
+    flex-direction: column;
+  }
   ${(props) => {
     if (props.margin)
       return `
-    margin: 1vh 4vw 7.3125em 4vw;`;
+    margin: 1vh 4vw 7.3125em 4vw;
+    `;
   }}
   ${(props) => {
     if (props.bottomDiv)
       return `
-    margin: 0;`;
+    margin: 0;
+     @media (max-width: 811px) {
+    gap: 1.066875em;
+  }`;
   }}
   ${(props) => {
     if (props.bottomContainer)
       return `
     margin: 1vh 4vw 0 4vw;
-    padding: 2.375em;
+    padding: 2.375em 0;
+    @media (max-width: 811px) {
+        flex-direction: column-reverse;
+    }
     `;
   }}
 `;
