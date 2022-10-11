@@ -5,6 +5,9 @@ import "./App.css";
 import GlobalStyles from "./GlobalStyles";
 import { Header } from "./components/Header";
 
+import BodyPage from "./pages/Body";
+import PlanetsPage from "./pages/Planets";
+
 const Placeholder = () => <div className="App"></div>;
 //=======
 import { Footer } from "./components/Footer";
@@ -26,11 +29,11 @@ function App() {
         />
         <Route
           path="/planets"
-          element={<Placeholder /> /* TODO: Replace with planets page */}
+          element={<PlanetsPage />}
         />
         <Route
-          path="/planet/:id"
-          element={<Placeholder /> /* TODO: Replace with planet page */}
+          path="/body/:id"
+          element={<BodyPage />}
         />
         <Route
           path="/about"
