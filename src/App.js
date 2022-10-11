@@ -7,6 +7,7 @@ import { Header } from "./components/Header";
 
 import BodyPage from "./pages/Body";
 import PlanetsPage from "./pages/Planets";
+import NotFoundPage from "./pages/NotFound";
 
 const Placeholder = () => <div className="App"></div>;
 //=======
@@ -21,7 +22,7 @@ function App() {
       <Routes>
         <Route
           path="*"
-          element={<Placeholder /> /* TODO: Replace with 404 page */}
+          element={<NotFoundPage />}
         />
         <Route
           path="/"
