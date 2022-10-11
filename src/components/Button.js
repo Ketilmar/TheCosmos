@@ -20,6 +20,7 @@ const StyledButton = styled(Link)`
   padding: .5em 1em;
   border-radius: .5em;
   transition: filter .25s ease-in-out;
+  text-align: center;
 
   &:hover {
     filter: brightness(110%);
