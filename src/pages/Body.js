@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import { endpoints, colors } from '../constants'
 
+import PageHeader from '../components/PageHeader'
 import CelestialObjectSection from '../components/CelestialObjectSection'
 import CelestialObjectCard from '../components/CelestialObjectCard'
 
@@ -40,21 +41,21 @@ const BodyPage = () => {
 
   if (isLoading) return (
     <>
-      <h1>{params.id}</h1>
+      <PageHeader title={params.id} />
       <p>Loading...</p>
     </>
   )
 
   if (!data) return (
     <>
-      <h1>{params.id}</h1>
+      <PageHeader title={params.id} />
       <p>Unable to find celestial body with ID: {params.id}</p>
     </>
   )
 
   return (
     <>
-      <h1>{data.englishName || 'Unknown'}</h1>
+      <PageHeader title={data.englishName || 'Unknown'} />
       <CelestialObjectSection data={data} color={colors?.[data.id] || colors.moon} />
       {data.moons && <StyledMoonsSection>
         <h2>Moons</h2>

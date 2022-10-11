@@ -2,11 +2,12 @@ import styled from 'styled-components'
 
 import { planets } from '../constants'
 
+import PageHeader from '../components/PageHeader'
 import CelestialObjectCard from '../components/CelestialObjectCard'
 
 const Planets = () => (
   <>
-    <h1>Planets</h1>
+    <PageHeader title="Planets"/>
     <StyledPlanetsSection>
       {planets.map((planet) => (
         <StyledCelestialObjectCard
