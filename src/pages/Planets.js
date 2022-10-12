@@ -1,6 +1,6 @@
 import { planets } from '../constants'
 
-import PageHeader from '../components/PageHeader'
+import PageHeader from '../components/PageHeader/PageHeader'
 import CelestialObjectCardsContainer from '../components/CelestialObjectCardsContainer/CelestialObjectCardsContainer'
 import CelestialObjectCard from '../components/CelestialObjectCard/CelestialObjectCard'
 
