@@ -5,10 +5,11 @@ import styled from 'styled-components'
 import { endpoints, colors } from '../constants'
 
 import PageHeader from '../components/PageHeader'
-import CelestialObjectCardsContainer from '../components/CelestialObjectCardsContainer'
-import CelestialObjectCard from '../components/CelestialObjectCard'
-import CelestialObject from '../components/CelestialObject'
-import CelestialObjectInformation from '../components/CelestialObjectInformation'
+import CelestialObjectCardsContainer from '../components/CelestialObjectCardsContainer/CelestialObjectCardsContainer'
+import CelestialObjectCard from '../components/CelestialObjectCard/CelestialObjectCard'
+import CelestialObject from '../components/CelestialObject/CelestialObject'
+import CelestialObjectInformation from '../components/CelestialObjectInformation/CelestialObjectInformation'
+import LoadingBox from '../components/LoadingBox/LoadingBox'
 
 const BodyPage = () => {
   const [ isLoading, setIsLoading ] = useState(false)
