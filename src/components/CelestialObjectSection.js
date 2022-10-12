@@ -14,6 +14,7 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2em;
+  padding-block: 2em;
 
   @media (min-width: 48em) {
     flex-direction: row;

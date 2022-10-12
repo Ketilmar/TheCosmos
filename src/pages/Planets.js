@@ -23,6 +23,7 @@ const Planets = () => (
 const StyledPlanetsSection = styled.section`
   display: flex;
   gap: 1em;
+  padding-block: 2em;
   overflow-x: auto;
 
   @media (min-width: 26em) {

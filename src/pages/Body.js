@@ -70,7 +70,9 @@ const BodyPage = () => {
   )
 }
 
-const StyledMoonsSection = styled.section``
+const StyledMoonsSection = styled.section`
+  padding-block: 2em;
+`
 
 const StyledMoonCardsContainer = styled.div`
   display: flex;
