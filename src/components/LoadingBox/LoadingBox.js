@@ -1,0 +1,1 @@
+export { StyledLoadingBox as default } from "./StyledLoadingBox"
