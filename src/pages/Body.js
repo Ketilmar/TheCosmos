@@ -68,15 +68,15 @@ const BodyPage = () => {
         <StyledCelestialObjectInformation data={data} />
       </StyledCelestialObjectSection>
 
-      <StyledMoonsSection>
+      {data.moons && <StyledMoonsSection>
         <h2>Moons</h2>
-        {data.moons && <CelestialObjectCardsContainer>
+        <CelestialObjectCardsContainer>
           {data.moons.map(moon => {
             const id = moon.rel.match(/\w+$/)?.[0]
             return (<CelestialObjectCard key={id} id={id} name={moon.moon} to={`/body/${id}`}/>)
         })}
-        </CelestialObjectCardsContainer>}
-      </StyledMoonsSection>
+        </CelestialObjectCardsContainer>
+      </StyledMoonsSection>}
     </>
   )
 }
