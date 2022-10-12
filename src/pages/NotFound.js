@@ -1,7 +1,11 @@
+import PageHeader from '../components/PageHeader'
+
 const NotFoundPage = () => (
   <>
-    <h1>Not found</h1>
-    <p>Sorry, we were unable to find what you were looking for.</p>
+    <PageHeader title="Not found"/>
+    <article>
+      <p>Sorry, we were unable to find what you were looking for.</p>
+    </article>
   </>
 )
 
