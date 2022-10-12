@@ -49,7 +49,8 @@ export const StyledFooterRow = styled.div`
     if (props.linkContainer)
       return `
     justify-content: flex-end;
-    width: 100%;`;
+    width: 100%;
+    white-space: nowrap;`;
   }}
 `;
 
@@ -58,15 +59,17 @@ export const Border = styled.div`
   background-color: #a7a7a7;
 `;
 
-export const HeaderFooterP = styled.p`
+export const HeaderFooterP = styled.h5`
   font-weight: 800;
   font-size: 1.3rem;
+  margin: 1.15em 0;
   ${(props) => {
     if (props.smallHeader)
       return `
     font-size: 1.1rem;
-    font-weight: 600;`;
-  }}
+    font-weight: 600;
+    margin: 1.4em 0;`;
+  }};
 `;
 
 export const FooterP = styled.p`
