@@ -7,7 +7,7 @@ import { endpoints, colors } from '../constants'
 import PageHeader from '../components/PageHeader'
 import CelestialObjectCardsContainer from '../components/CelestialObjectCardsContainer'
 import CelestialObjectCard from '../components/CelestialObjectCard'
-import CelestialObject from '../components/CelestialObject'
+import CelestialObject from '../components/CelestialObject/CelestialObject'
 import CelestialObjectInformation from '../components/CelestialObjectInformation'
 
 const BodyPage = () => {
