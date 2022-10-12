@@ -1,4 +1,4 @@
-import PageHeader from '../components/PageHeader'
+import PageHeader from "../../components/PageHeader/PageHeader";
 
 const NotFoundPage = () => (
   <>
@@ -7,6 +7,6 @@ const NotFoundPage = () => (
       <p>Sorry, we were unable to find what you were looking for.</p>
     </article>
   </>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

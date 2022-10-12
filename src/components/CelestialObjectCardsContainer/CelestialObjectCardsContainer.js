@@ -1,0 +1,1 @@
+export { StyledCelestialObjectCardsContainer as default } from "./StyledCelestialObjectCardsContainer";
