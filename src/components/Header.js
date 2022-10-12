@@ -17,7 +17,7 @@ const Header = () => {
 const HeaderStyle = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 1vh 4vw 0 4vw;
+  padding-block: 1em;
 
   & a {
     margin-top: 1em;
