@@ -12,7 +12,7 @@ let elementHider = () => {
   } else {
     lastKnown = y;
     myId[0].className = "header-wrapper  show";
-    console.log("trigger show");
+    // console.log("trigger show");
   }
 };
 
