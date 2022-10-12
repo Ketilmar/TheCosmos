@@ -29,7 +29,7 @@ export const StyledCelestialObjectSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2em;
-  padding-block: 2em;
+  margin-block: 2em 10em;
 
   @media (min-width: 48em) {
     flex-direction: row;
@@ -50,7 +50,7 @@ export const StyledCelestialObjectInformation = styled(CelestialObjectInformatio
 `;
 
 export const StyledMoonsSection = styled.section`
-  padding-block: 2em;
+  margin-block: 2em 10em;
   
   h2 {
     font-size: 1.4rem;

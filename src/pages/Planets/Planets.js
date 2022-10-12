@@ -4,10 +4,12 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 import CelestialObjectCardsContainer from "../../components/CelestialObjectCardsContainer/CelestialObjectCardsContainer";
 import CelestialObjectCard from "../../components/CelestialObjectCard/CelestialObjectCard";
 
+import { StyledSection } from "./StyledPlanets";
+
 const Planets = () => (
   <>
     <PageHeader title="Planets"/>
-    <section>
+    <StyledSection>
       <CelestialObjectCardsContainer>
         {planets.map((planet) => (
           <CelestialObjectCard
@@ -17,7 +19,7 @@ const Planets = () => (
           />
         ))}
       </CelestialObjectCardsContainer>
-    </section>
+    </StyledSection>
   </>
 );
 
