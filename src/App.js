@@ -4,46 +4,50 @@ import styled from "styled-components";
 import "./App.css";
 import GlobalStyles from "./GlobalStyles";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer"
 
 import NotFoundPage from "./pages/NotFound/NotFound";
 import BodyPage from "./pages/Body/Body";
 import PlanetsPage from "./pages/Planets/Planets";
+import { About as AboutPage } from "./pages/About";
 
 const Placeholder = () => <div className="App"></div>;
 
 function App() {
   return (
-    <StyledLayoutContainer>
+    <>
       <GlobalStyles />
-      <Header />
-      <Routes>
-        <Route
-          path="*"
-          element={<NotFoundPage />}
-        />
-        <Route
-          path="/"
-          element={<Placeholder /> /* TODO: Replace with landing page */}
-        />
-        <Route
-          path="/planets"
-          element={<PlanetsPage />}
-        />
-        <Route
-          path="/body/:id"
-          element={<BodyPage />}
-        />
-        <Route
-          path="/about"
-          element={<Placeholder /> /* TODO: Replace with about page */}
-        />
-        <Route
-          path="/contact"
-          element={<Placeholder /> /* TODO: Replace with contact page */}
-        />
-      </Routes>
-      {/* TODO: Add site footer component here */}
-    </StyledLayoutContainer>
+      <StyledLayoutContainer>
+        <Header />
+        <Routes>
+          <Route
+            path="*"
+            element={<NotFoundPage />}
+          />
+          <Route
+            path="/"
+            element={<Placeholder /> /* TODO: Replace with landing page */}
+          />
+          <Route
+            path="/planets"
+            element={<PlanetsPage />}
+          />
+          <Route
+            path="/body/:id"
+            element={<BodyPage />}
+          />
+          <Route
+            path="/about"
+            element={<AboutPage />}
+          />
+          <Route
+            path="/contact"
+            element={<Placeholder /> /* TODO: Replace with contact page */}
+          />
+        </Routes>
+        <Footer />
+      </StyledLayoutContainer>
+    </>
   );
 }
 
