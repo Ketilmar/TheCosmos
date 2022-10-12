@@ -1,6 +1,5 @@
 // import React from "react";
-import styled from "styled-components";
-import { BurgerMenu } from "./BurgerMenu";
+import { Link } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import { HeaderStyle } from "./HeaderStyles";
 
@@ -8,7 +7,7 @@ const Header = () => {
   return (
     <header className="header-wrapper">
       <HeaderStyle>
-        <a href="/">The Solar System</a>
+        <Link to="/">The Solar System</Link>
         <Navbar />
       </HeaderStyle>
     </header>

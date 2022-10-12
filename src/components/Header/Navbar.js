@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BurgerMenu } from "./BurgerMenu";
 import { NavbarStyle, MobileView } from "./NavbarStyles";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   // for open/close mobile menu
@@ -12,10 +13,10 @@ const Navbar = () => {
   return (
     <div className="navbar-wrapper">
       <NavbarStyle>
-        <p>Home</p>
-        <p>Planets</p>
-        <p>About</p>
-        <p>Contact</p>
+        <Link to="/">Home</Link>
+        <Link to="/planets">Planets</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
       </NavbarStyle>
 
       <MobileView>
@@ -36,7 +37,7 @@ const Navbar = () => {
               justify-content: flex-end;
             }
 
-            .navbar-wrapper > div > p {
+            .navbar-wrapper > div > a {
               display: ${burgerOpen ? "inline" : "none"};
             }
 
