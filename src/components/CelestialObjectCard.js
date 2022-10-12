@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import CelestialObject from './CelestialObject'
-import Button from './Button'
+import Button from './Button/Button'
 
 const CelestialObjectCard = ({
   className,
