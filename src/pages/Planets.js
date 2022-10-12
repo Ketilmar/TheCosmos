@@ -2,7 +2,7 @@ import { planets } from '../constants'
 
 import PageHeader from '../components/PageHeader'
 import CelestialObjectCardsContainer from '../components/CelestialObjectCardsContainer'
-import CelestialObjectCard from '../components/CelestialObjectCard'
+import CelestialObjectCard from '../components/CelestialObjectCard/CelestialObjectCard'
 
 const Planets = () => (
   <>
