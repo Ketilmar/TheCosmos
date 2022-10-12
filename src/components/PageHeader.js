@@ -8,7 +8,7 @@ const PageHeader = ({ className, title, description }) => (
 )
 
 const StyledHeader = styled.header`
-  margin-block: 2em 1em;
+  margin-block: 2em;
 
   h1,
   p {
