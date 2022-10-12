@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const PageHeader = ({ className, title, description, children }) => (
   <StyledHeader className={className}>
-    <h1>{title}</h1>
+    {title && <h1>{title}</h1>}
     {description && <p>{description}</p>}
     {children}
   </StyledHeader>
