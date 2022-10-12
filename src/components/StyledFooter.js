@@ -11,7 +11,6 @@ export const StyledFooterSection = styled.section`
   display: flex;
   flex-direction: column;
   bottom: 0;
-  width: 100%;
   background-color: #0f131f;
 `;
 
@@ -26,7 +25,7 @@ export const StyledFooterRow = styled.div`
   ${(props) => {
     if (props.margin)
       return `
-    margin: 1vh 4vw 7.3125em 4vw;
+    margin-bottom: 7.3125em;
     `;
   }}
   ${(props) => {
@@ -40,17 +39,21 @@ export const StyledFooterRow = styled.div`
   ${(props) => {
     if (props.bottomContainer)
       return `
-    margin: 1vh 4vw 0 4vw;
     padding: 2.375em 0;
     @media (max-width: 811px) {
         flex-direction: column-reverse;
     }
     `;
   }}
+  ${(props) => {
+    if (props.linkContainer)
+      return `
+    justify-content: flex-end;
+    width: 100%;`;
+  }}
 `;
 
 export const Border = styled.div`
-  width: 100%;
   height: 1px;
   background-color: #a7a7a7;
 `;
@@ -58,6 +61,12 @@ export const Border = styled.div`
 export const HeaderFooterP = styled.p`
   font-weight: 800;
   font-size: 1.3rem;
+  ${(props) => {
+    if (props.smallHeader)
+      return `
+    font-size: 1.1rem;
+    font-weight: 600;`;
+  }}
 `;
 
 export const FooterP = styled.p`
@@ -79,8 +88,4 @@ export const FooterLink = styled(Link)`
 export const FooterA = styled.a`
   color: #cccccc;
   text-decoration: none;
-`;
-
-export const StyledFooterDiv = styled.div`
-  margin: 1vh 4vw 0 4vw;
 `;

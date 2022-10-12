@@ -20,29 +20,31 @@ export const Footer = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </FooterP>
           </StyledFooterColumn>
-          <StyledFooterColumn>
-            <HeaderFooterP>Planets</HeaderFooterP>
-            <FooterLink to="/">Mercury</FooterLink>
-            <FooterLink to="/">Venus</FooterLink>
-            <FooterLink to="/">Earth</FooterLink>
-            <FooterLink to="/">Mars</FooterLink>
-            <FooterLink to="/">Jupiter</FooterLink>
-            <FooterLink to="/">Saturn</FooterLink>
-            <FooterLink to="/">Uranus</FooterLink>
-            <FooterLink to="/">Neptune</FooterLink>
-          </StyledFooterColumn>
-          <StyledFooterColumn>
-            <HeaderFooterP>Information</HeaderFooterP>
-            <FooterA href="#">How it works</FooterA>
-            <FooterA href="#">Download app</FooterA>
-            <FooterA href="#">Developer portal</FooterA>
-          </StyledFooterColumn>
-          <StyledFooterColumn>
-            <HeaderFooterP>About</HeaderFooterP>
-            <FooterA href="#">News and press</FooterA>
-            <FooterA href="#">Personal data and collection</FooterA>
-            <FooterA href="#">FAQ</FooterA>
-          </StyledFooterColumn>
+          <StyledFooterRow linkContainer>
+            <StyledFooterColumn>
+              <HeaderFooterP smallHeader>Planets</HeaderFooterP>
+              <FooterLink to="/">Mercury</FooterLink>
+              <FooterLink to="/">Venus</FooterLink>
+              <FooterLink to="/">Earth</FooterLink>
+              <FooterLink to="/">Mars</FooterLink>
+              <FooterLink to="/">Jupiter</FooterLink>
+              <FooterLink to="/">Saturn</FooterLink>
+              <FooterLink to="/">Uranus</FooterLink>
+              <FooterLink to="/">Neptune</FooterLink>
+            </StyledFooterColumn>
+            <StyledFooterColumn>
+              <HeaderFooterP smallHeader>Information</HeaderFooterP>
+              <FooterA href="#">How it works</FooterA>
+              <FooterA href="#">Download app</FooterA>
+              <FooterA href="#">Developer portal</FooterA>
+            </StyledFooterColumn>
+            <StyledFooterColumn>
+              <HeaderFooterP smallHeader>About</HeaderFooterP>
+              <FooterA href="#">News and press</FooterA>
+              <FooterA href="#">Personal data and collection</FooterA>
+              <FooterA href="#">FAQ</FooterA>
+            </StyledFooterColumn>
+          </StyledFooterRow>
         </StyledFooterRow>
       </StyledFooterRow>
       <Border />
