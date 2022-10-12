@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import "./App.css";
 import GlobalStyles from "./GlobalStyles";
-import { Header } from "./components/Header";
+import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer";
 
 import NotFoundPage from "./pages/NotFound/NotFound";
