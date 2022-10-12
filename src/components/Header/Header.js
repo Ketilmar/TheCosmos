@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { BurgerMenu } from "./BurgerMenu";
 import { Navbar } from "./Navbar";
+import { HeaderStyle } from "./HeaderStyles";
 
 const Header = () => {
   return (
@@ -13,17 +14,5 @@ const Header = () => {
     </header>
   );
 };
-
-const HeaderStyle = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding-block: 1em;
-
-  & a {
-    margin-top: 1em;
-    font-weight: bold;
-    text-decoration: none;
-  }
-`;
 
 export { Header };

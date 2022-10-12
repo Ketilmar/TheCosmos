@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import "./App.css";
 import GlobalStyles from "./GlobalStyles";
-import { Header } from "./components/Header";
+import { Header } from "./components/Header/Header";
 
 import BodyPage from "./pages/Body";
 import PlanetsPage from "./pages/Planets";
@@ -17,22 +17,13 @@ function App() {
       <GlobalStyles />
       <Header />
       <Routes>
-        <Route
-          path="*"
-          element={<NotFoundPage />}
-        />
+        <Route path="*" element={<NotFoundPage />} />
         <Route
           path="/"
           element={<Placeholder /> /* TODO: Replace with landing page */}
         />
-        <Route
-          path="/planets"
-          element={<PlanetsPage />}
-        />
-        <Route
-          path="/body/:id"
-          element={<BodyPage />}
-        />
+        <Route path="/planets" element={<PlanetsPage />} />
+        <Route path="/body/:id" element={<BodyPage />} />
         <Route
           path="/about"
           element={<Placeholder /> /* TODO: Replace with about page */}
@@ -54,11 +45,11 @@ const StyledLayoutContainer = styled.div`
     @media (min-width: 48em) {
       padding-inline: 2em;
     }
-    
+
     @media (min-width: 80em) {
       padding-inline: calc((100% - 80em) / 2 + 2.5em);
     }
   }
-`
+`;
 
 export default App;
