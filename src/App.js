@@ -9,6 +9,7 @@ import { Footer } from "./components/Footer"
 import NotFoundPage from "./pages/NotFound/NotFound";
 import BodyPage from "./pages/Body/Body";
 import PlanetsPage from "./pages/Planets/Planets";
+import { About as AboutPage } from "./pages/About";
 
 const Placeholder = () => <div className="App"></div>;
 
@@ -37,7 +38,7 @@ function App() {
           />
           <Route
             path="/about"
-            element={<Placeholder /> /* TODO: Replace with about page */}
+            element={<AboutPage />}
           />
           <Route
             path="/contact"
