@@ -4,6 +4,7 @@ import styled from "styled-components";
 import "./App.css";
 import GlobalStyles from "./GlobalStyles";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer"
 
 import NotFoundPage from "./pages/NotFound/NotFound";
 import BodyPage from "./pages/Body/Body";
@@ -42,7 +43,7 @@ function App() {
           element={<Placeholder /> /* TODO: Replace with contact page */}
         />
       </Routes>
-      {/* TODO: Add site footer component here */}
+      <Footer />
     </StyledLayoutContainer>
   );
 }
