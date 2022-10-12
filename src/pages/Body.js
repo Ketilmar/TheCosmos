@@ -9,6 +9,7 @@ import CelestialObjectCardsContainer from '../components/CelestialObjectCardsCon
 import CelestialObjectCard from '../components/CelestialObjectCard'
 import CelestialObject from '../components/CelestialObject'
 import CelestialObjectInformation from '../components/CelestialObjectInformation'
+import LoadingBox from '../components/LoadingBox/LoadingBox'
 
 const BodyPage = () => {
   const [ isLoading, setIsLoading ] = useState(false)
@@ -43,18 +44,22 @@ const BodyPage = () => {
 
   if (isLoading) return (
     <>
-      <PageHeader title={params.id} />
-      <article>
-        <p>Loading...</p>
-      </article>
+      <PageHeader>
+        <StyledPageHeaderLoadingBox />
+      </PageHeader>
+
+      <StyledCelestialObjectSection>
+        <StyledCelestialObjectLoadingBox />
+        <StyledInformationLoadingBox />
+      </StyledCelestialObjectSection>
     </>
   )
 
   if (!data) return (
     <>
-      <PageHeader title={params.id} />
+      <PageHeader title="Error" />
       <article>
-        <p>Unable to find celestial body with ID: {params.id}</p>
+        <p>Unable to find celestial body with the ID "{params.id}".</p>
       </article>
     </>
   )
@@ -80,6 +85,27 @@ const BodyPage = () => {
     </>
   )
 }
+
+const StyledPageHeaderLoadingBox = styled(LoadingBox)`
+  height: 5rem;
+`
+
+const StyledCelestialObjectLoadingBox = styled(LoadingBox)`
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  @media (min-width: 48em) {
+    max-width: 40%;
+  }
+`
+
+const StyledInformationLoadingBox = styled(LoadingBox)`
+  height: 30em;
+
+  @media (min-width: 48em) {
+    max-width: 50%;
+  }
+`
 
 const StyledCelestialObjectSection = styled.section`
   display: flex;
