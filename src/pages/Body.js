@@ -72,6 +72,17 @@ const BodyPage = () => {
 
 const StyledMoonsSection = styled.section`
   padding-block: 2em;
+  
+  h2 {
+    font-size: 1.4rem;
+    margin-block: 4em 1em;
+  }
+
+  @media (min-width: 48em) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
 `
 
 const StyledMoonCardsContainer = styled.div`
