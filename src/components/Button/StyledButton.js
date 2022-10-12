@@ -1,12 +1,12 @@
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const colors = {
   blue: ['#1E84FD', '#0238C5'],
   red:  ['#FD531E', '#9A2500']
 }
 
-const StyledButton = styled(Link)`
+export const StyledButton = styled(Link)`
   display: inline-block;
   background-color: ${props => props.isRed ? colors.red[0] : colors.blue[0]};
   background: linear-gradient(
@@ -25,6 +25,4 @@ const StyledButton = styled(Link)`
   &:hover {
     filter: brightness(110%);
   }
-`
-
-export default StyledButton
+`;
