@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledCelestialObjectCardsContainer = styled.div`
+export const StyledCelestialObjectCardsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -17,6 +17,4 @@ const StyledCelestialObjectCardsContainer = styled.div`
   @media (min-width: 64em) {
     grid-template-columns: repeat(4, 1fr);
   }
-`
-
-export default StyledCelestialObjectCardsContainer
+`;
