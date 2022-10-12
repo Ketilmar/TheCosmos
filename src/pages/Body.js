@@ -6,6 +6,7 @@ import { endpoints, colors } from '../constants'
 
 import PageHeader from '../components/PageHeader'
 import CelestialObjectSection from '../components/CelestialObjectSection'
+import CelestialObjectCardsContainer from '../components/CelestialObjectCardsContainer'
 import CelestialObjectCard from '../components/CelestialObjectCard'
 
 const BodyPage = () => {
@@ -57,15 +58,15 @@ const BodyPage = () => {
     <>
       <PageHeader title={data.englishName || 'Unknown'} />
       <CelestialObjectSection data={data} color={colors?.[data.id] || colors.moon} />
-      {data.moons && <StyledMoonsSection>
+      <StyledMoonsSection>
         <h2>Moons</h2>
-        <StyledMoonCardsContainer>
+        {data.moons && <CelestialObjectCardsContainer>
           {data.moons.map(moon => {
             const id = moon.rel.match(/\w+$/)?.[0]
             return (<CelestialObjectCard key={id} id={id} name={moon.moon} to={`/body/${id}`}/>)
-          })}
-        </StyledMoonCardsContainer>
-      </StyledMoonsSection>}
+        })}
+        </CelestialObjectCardsContainer>}
+      </StyledMoonsSection>
     </>
   )
 }
@@ -82,26 +83,6 @@ const StyledMoonsSection = styled.section`
     h2 {
       font-size: 2rem;
     }
-  }
-`
-
-const StyledMoonCardsContainer = styled.div`
-  display: flex;
-  gap: 1em;
-  overflow-x: auto;
-
-  > * {
-    min-width: 20em;
-  }
-
-  @media (min-width: 48em) {
-    overflow-x: initial;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 100%));
-  }
-
-  @media (min-width: 64em) {
-    grid-template-columns: repeat(3, minmax(0, 100%));
   }
 `
 
