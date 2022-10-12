@@ -49,7 +49,7 @@ const StyledInformationContainer = styled.div`
   background-color: #141823;
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 1em;
   border-radius: 1em;
 
   > *:nth-child(odd):not(:first-child):not(:last-child) {
@@ -76,6 +76,10 @@ const StyledInformationContainer = styled.div`
     span {
       text-align: right;
     }
+  }
+
+  @media (min-width: 64em) {
+    padding: 2em;
   }
 `
 

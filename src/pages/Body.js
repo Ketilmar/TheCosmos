@@ -5,8 +5,10 @@ import styled from 'styled-components'
 import { endpoints, colors } from '../constants'
 
 import PageHeader from '../components/PageHeader'
-import CelestialObjectSection from '../components/CelestialObjectSection'
+import CelestialObjectCardsContainer from '../components/CelestialObjectCardsContainer'
 import CelestialObjectCard from '../components/CelestialObjectCard'
+import CelestialObject from '../components/CelestialObject'
+import CelestialObjectInformation from '../components/CelestialObjectInformation'
 
 const BodyPage = () => {
   const [ isLoading, setIsLoading ] = useState(false)
@@ -42,53 +44,79 @@ const BodyPage = () => {
   if (isLoading) return (
     <>
       <PageHeader title={params.id} />
-      <p>Loading...</p>
+      <article>
+        <p>Loading...</p>
+      </article>
     </>
   )
 
   if (!data) return (
     <>
       <PageHeader title={params.id} />
-      <p>Unable to find celestial body with ID: {params.id}</p>
+      <article>
+        <p>Unable to find celestial body with ID: {params.id}</p>
+      </article>
     </>
   )
 
   return (
     <>
       <PageHeader title={data.englishName || 'Unknown'} />
-      <CelestialObjectSection data={data} color={colors?.[data.id] || colors.moon} />
+      
+      <StyledCelestialObjectSection>
+        <StyledCelestialObject color={colors?.[data.id] || colors.moon} />
+        <StyledCelestialObjectInformation data={data} />
+      </StyledCelestialObjectSection>
+
       {data.moons && <StyledMoonsSection>
         <h2>Moons</h2>
-        <StyledMoonCardsContainer>
+        <CelestialObjectCardsContainer>
           {data.moons.map(moon => {
             const id = moon.rel.match(/\w+$/)?.[0]
             return (<CelestialObjectCard key={id} id={id} name={moon.moon} to={`/body/${id}`}/>)
-          })}
-        </StyledMoonCardsContainer>
+        })}
+        </CelestialObjectCardsContainer>
       </StyledMoonsSection>}
     </>
   )
 }
 
-const StyledMoonsSection = styled.section``
-
-const StyledMoonCardsContainer = styled.div`
+const StyledCelestialObjectSection = styled.section`
   display: flex;
-  gap: 1em;
-  overflow-x: auto;
+  flex-direction: column;
+  gap: 2em;
+  padding-block: 2em;
 
-  > * {
-    min-width: 20em;
+  @media (min-width: 48em) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`
+
+const StyledCelestialObject = styled(CelestialObject)`
+  @media (min-width: 48em) {
+    max-width: 40%;
+  }
+`
+
+const StyledCelestialObjectInformation = styled(CelestialObjectInformation)`
+  @media (min-width: 48em) {
+    min-width: 50%;
+  }
+`
+
+const StyledMoonsSection = styled.section`
+  padding-block: 2em;
+  
+  h2 {
+    font-size: 1.4rem;
+    margin-block: 4em 1em;
   }
 
   @media (min-width: 48em) {
-    overflow-x: initial;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 100%));
-  }
-
-  @media (min-width: 64em) {
-    grid-template-columns: repeat(3, minmax(0, 100%));
+    h2 {
+      font-size: 2rem;
+    }
   }
 `
 
