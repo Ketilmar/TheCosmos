@@ -8,7 +8,7 @@ import PageHeader from '../components/PageHeader'
 import CelestialObjectCardsContainer from '../components/CelestialObjectCardsContainer/CelestialObjectCardsContainer'
 import CelestialObjectCard from '../components/CelestialObjectCard/CelestialObjectCard'
 import CelestialObject from '../components/CelestialObject/CelestialObject'
-import CelestialObjectInformation from '../components/CelestialObjectInformation'
+import CelestialObjectInformation from '../components/CelestialObjectInformation/CelestialObjectInformation'
 
 const BodyPage = () => {
   const [ isLoading, setIsLoading ] = useState(false)
