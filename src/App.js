@@ -5,9 +5,9 @@ import "./App.css";
 import GlobalStyles from "./GlobalStyles";
 import { Header } from "./components/Header";
 
+import NotFoundPage from "./pages/NotFound/NotFound";
 import BodyPage from "./pages/Body/Body";
 import PlanetsPage from "./pages/Planets";
-import NotFoundPage from "./pages/NotFound";
 
 const Placeholder = () => <div className="App"></div>;
 
