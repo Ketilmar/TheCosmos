@@ -1,8 +1,8 @@
-import { planets } from '../constants'
+import { planets } from "../../constants";
 
-import PageHeader from '../components/PageHeader/PageHeader'
-import CelestialObjectCardsContainer from '../components/CelestialObjectCardsContainer/CelestialObjectCardsContainer'
-import CelestialObjectCard from '../components/CelestialObjectCard/CelestialObjectCard'
+import PageHeader from "../../components/PageHeader/PageHeader";
+import CelestialObjectCardsContainer from "../../components/CelestialObjectCardsContainer/CelestialObjectCardsContainer";
+import CelestialObjectCard from "../../components/CelestialObjectCard/CelestialObjectCard";
 
 const Planets = () => (
   <>
@@ -19,6 +19,6 @@ const Planets = () => (
       </CelestialObjectCardsContainer>
     </section>
   </>
-)
+);
 
-export default Planets
+export default Planets;
