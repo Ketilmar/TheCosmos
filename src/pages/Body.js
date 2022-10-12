@@ -43,14 +43,18 @@ const BodyPage = () => {
   if (isLoading) return (
     <>
       <PageHeader title={params.id} />
-      <p>Loading...</p>
+      <article>
+        <p>Loading...</p>
+      </article>
     </>
   )
 
   if (!data) return (
     <>
       <PageHeader title={params.id} />
-      <p>Unable to find celestial body with ID: {params.id}</p>
+      <article>
+        <p>Unable to find celestial body with ID: {params.id}</p>
+      </article>
     </>
   )
 
