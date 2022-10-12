@@ -57,9 +57,9 @@ const BodyPage = () => {
 
   if (!data) return (
     <>
-      <PageHeader title={params.id} />
+      <PageHeader title="Error" />
       <article>
-        <p>Unable to find celestial body with ID: {params.id}</p>
+        <p>Unable to find celestial body with the ID "{params.id}".</p>
       </article>
     </>
   )
