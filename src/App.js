@@ -5,12 +5,12 @@ import styled from "styled-components";
 import "./App.css";
 import GlobalStyles from "./GlobalStyles";
 import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 
 import NotFoundPage from "./pages/NotFound/NotFound";
 import BodyPage from "./pages/Body/Body";
 import PlanetsPage from "./pages/Planets/Planets";
-import { About as AboutPage } from "./pages/About";
+import AboutPage from "./pages/About/About";
 import ContactPage from "./pages/Contact/Contact";
 
 const Placeholder = () => <div className="App"></div>;

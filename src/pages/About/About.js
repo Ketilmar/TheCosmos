@@ -1,7 +1,7 @@
 import PageHeader from "../../components/PageHeader/PageHeader";
 import { AboutP, AboutSection } from "./StyledAbout";
 
-export const About = () => {
+const AboutPage = () => {
   return (
     <AboutSection>
       <PageHeader title="About" />
@@ -39,3 +39,5 @@ export const About = () => {
     </AboutSection>
   );
 };
+
+export default AboutPage;
