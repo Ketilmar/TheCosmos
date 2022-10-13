@@ -3,6 +3,17 @@ import {
   StyledHeading
 } from "./StyledCelestialObjectInformation";
 
+const formatDate = (input) => {
+  try {
+    const [ _input, d, m, y ] = input.match(/(\d+)\/(\d+)\/(\d+)/);
+    const date = new Date(y, m, d);
+    return date.toLocaleDateString(undefined, {dateStyle: "long"});
+  
+  } catch (err) {
+    return "Unknown";
+  }
+}
+
 const CelestialObjectInformation = ({ className, data }) => (
   <StyledInformationContainer className={className}>
     <StyledHeading>Information</StyledHeading>
@@ -11,7 +22,7 @@ const CelestialObjectInformation = ({ className, data }) => (
     <span>{data.discoveredBy || 'Unknown'}</span>
 
     <b>Discovery date:</b>
-    <span>{data.discoveryDate || 'Unknown'}</span>
+    <span>{formatDate(data.discoveryDate)}</span>
 
     <b>Avg temp:</b>
     <span>{data.avgTemp} K</span>
