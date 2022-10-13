@@ -18,21 +18,21 @@ export const StyledFooterRow = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 8.3125em;
-  @media (max-width: 1083px) {
+  @media (max-width: 811px) {
     gap: 1.5625em;
     flex-direction: column;
   }
   ${(props) => {
     if (props.margin)
       return `
-    margin-bottom: 7.3125em;
+    margin: 7.3125em 0;
     `;
   }}
   ${(props) => {
     if (props.bottomDiv)
       return `
     margin: 0;
-     @media (max-width: 1083px) {
+     @media (max-width: 811px) {
     gap: 1.066875em;
   }`;
   }}
