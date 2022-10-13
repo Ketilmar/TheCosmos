@@ -1,10 +1,5 @@
-import PageHeader from "../components/PageHeader/PageHeader";
-import {
-  AboutArticle,
-  AboutH1,
-  AboutP,
-  AboutSection,
-} from "../components/StyledAbout";
+import PageHeader from "../../components/PageHeader/PageHeader";
+import { AboutP, AboutSection } from "./StyledAbout";
 
 export const About = () => {
   return (
