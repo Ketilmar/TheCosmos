@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/thecosmos/static/js/main.c9821bbf.js",
+    "main.js": "/thecosmos/static/js/main.0857829f.js",
     "static/js/787.b52c39bb.chunk.js": "/thecosmos/static/js/787.b52c39bb.chunk.js",
     "index.html": "/thecosmos/index.html",
-    "main.c9821bbf.js.map": "/thecosmos/static/js/main.c9821bbf.js.map",
+    "main.0857829f.js.map": "/thecosmos/static/js/main.0857829f.js.map",
     "787.b52c39bb.chunk.js.map": "/thecosmos/static/js/787.b52c39bb.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.c9821bbf.js"
+    "static/js/main.0857829f.js"
   ]
 }
