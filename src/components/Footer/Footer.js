@@ -10,7 +10,7 @@ import {
   StyledFooterSection,
 } from "./StyledFooter";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <StyledFooterSection>
       <StyledFooterColumn>
@@ -60,3 +60,5 @@ export const Footer = () => {
     </StyledFooterSection>
   );
 };
+
+export default Footer;
