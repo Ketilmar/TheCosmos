@@ -72,7 +72,7 @@ const BodyPage = () => {
 
   return (
     <>
-      <PageHeader title={data.englishName || 'Unknown'} />
+      <PageHeader title={data.name + (data.englishName && ` (${data.englishName})`)} />
       
       <StyledCelestialObjectSection>
         <StyledCelestialObject color={colors?.[data.id] || colors.moon} />
