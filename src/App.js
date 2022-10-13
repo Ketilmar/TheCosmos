@@ -11,6 +11,7 @@ import NotFoundPage from "./pages/NotFound/NotFound";
 import BodyPage from "./pages/Body/Body";
 import PlanetsPage from "./pages/Planets/Planets";
 import { About as AboutPage } from "./pages/About";
+import ContactPage from "./pages/Contact/Contact";
 
 const Placeholder = () => <div className="App"></div>;
 
@@ -33,10 +34,7 @@ function App() {
           <Route path="/planets" element={<PlanetsPage />} />
           <Route path="/body/:id" element={<BodyPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route
-            path="/contact"
-            element={<Placeholder /> /* TODO: Replace with contact page */}
-          />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </StyledLayoutContainer>
