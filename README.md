@@ -10,7 +10,7 @@ Its aim is to provide a modern and responsive interface for viewing statistics a
 A live version is available on github pages at https://ketilmar.github.io/TheCosmos/
 
 ### Running locally
-1. Close the repo
+1. Clone the repo
 2. Run the command `npm install` followed by `npm start`
 3. Enjoy :)
 
