@@ -8,6 +8,7 @@ import {
   StyledFooterRow,
   StyledFooterSection,
 } from "./StyledFooter";
+import { planets } from "../constants";
 
 export const Footer = () => {
   return (
@@ -23,14 +24,13 @@ export const Footer = () => {
           <StyledFooterRow linkContainer>
             <StyledFooterColumn>
               <HeaderFooterP smallHeader>Planets</HeaderFooterP>
-              <FooterLink to="/">Mercury</FooterLink>
-              <FooterLink to="/">Venus</FooterLink>
-              <FooterLink to="/">Earth</FooterLink>
-              <FooterLink to="/">Mars</FooterLink>
-              <FooterLink to="/">Jupiter</FooterLink>
-              <FooterLink to="/">Saturn</FooterLink>
-              <FooterLink to="/">Uranus</FooterLink>
-              <FooterLink to="/">Neptune</FooterLink>
+              {planets.map((item, index) => {
+                return (
+                  <FooterLink key={index} to={`/body/${item.id}`}>
+                    {item.name}
+                  </FooterLink>
+                );
+              })}
             </StyledFooterColumn>
             <StyledFooterColumn>
               <HeaderFooterP smallHeader>Information</HeaderFooterP>
