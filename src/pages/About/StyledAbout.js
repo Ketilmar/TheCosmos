@@ -8,7 +8,7 @@ export const AboutH1 = styled.h1`
 export const AboutP = styled.p`
   font-size: 1rem;
   margin-bottom: 1.2189999999999999em;
-  width: 70%;
+  max-width: 75ch;
 `;
 
 export const AboutSection = styled.section`
