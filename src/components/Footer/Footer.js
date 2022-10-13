@@ -1,3 +1,4 @@
+import { planets } from "../../constants";
 import {
   Border,
   FooterA,
@@ -7,8 +8,7 @@ import {
   StyledFooterColumn,
   StyledFooterRow,
   StyledFooterSection,
-} from "./Footer/StyledFooter";
-import { planets } from "../../constants";
+} from "./StyledFooter";
 
 export const Footer = () => {
   return (
