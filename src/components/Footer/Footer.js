@@ -1,3 +1,4 @@
+import { planets } from "../../constants";
 import {
   Border,
   FooterA,
@@ -8,19 +9,18 @@ import {
   StyledFooterRow,
   StyledFooterSection,
 } from "./StyledFooter";
-import { planets } from "../constants";
 
 export const Footer = () => {
   return (
     <StyledFooterSection>
+      <StyledFooterColumn>
+        <HeaderFooterP>The solar system</HeaderFooterP>
+        <FooterP>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </FooterP>
+      </StyledFooterColumn>
       <StyledFooterRow margin>
         <StyledFooterRow>
-          <StyledFooterColumn>
-            <HeaderFooterP>The solar system</HeaderFooterP>
-            <FooterP>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </FooterP>
-          </StyledFooterColumn>
           <StyledFooterRow linkContainer>
             <StyledFooterColumn>
               <HeaderFooterP smallHeader>Planets</HeaderFooterP>
