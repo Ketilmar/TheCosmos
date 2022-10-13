@@ -1,16 +1,17 @@
 import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import styled from "styled-components";
 
-import "./App.css";
 import GlobalStyles from "./GlobalStyles";
+
+import Layout from "./components/Layout/Layout";
 import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 
 import NotFoundPage from "./pages/NotFound/NotFound";
 import BodyPage from "./pages/Body/Body";
 import PlanetsPage from "./pages/Planets/Planets";
-import { About as AboutPage } from "./pages/About";
+import AboutPage from "./pages/About/About";
+import ContactPage from "./pages/Contact/Contact";
 
 const Placeholder = () => <div className="App"></div>;
 
@@ -22,7 +23,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <StyledLayoutContainer>
+      <Layout>
         <Header />
         <Routes>
           <Route path="*" element={<NotFoundPage />} />
@@ -33,29 +34,12 @@ function App() {
           <Route path="/planets" element={<PlanetsPage />} />
           <Route path="/body/:id" element={<BodyPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route
-            path="/contact"
-            element={<Placeholder /> /* TODO: Replace with contact page */}
-          />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
-      </StyledLayoutContainer>
+      </Layout>
     </>
   );
 }
-
-const StyledLayoutContainer = styled.div`
-  > * {
-    padding-inline: 1em;
-
-    @media (min-width: 48em) {
-      padding-inline: 2em;
-    }
-
-    @media (min-width: 80em) {
-      padding-inline: calc((100% - 80em) / 2 + 2.5em);
-    }
-  }
-`;
 
 export default App;
