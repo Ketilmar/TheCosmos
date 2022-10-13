@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
-import "./App.css";
 import GlobalStyles from "./GlobalStyles";
 import { Header } from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
