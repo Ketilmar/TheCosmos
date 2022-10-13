@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import styled from "styled-components";
 
 import GlobalStyles from "./GlobalStyles";
+
+import Layout from "./components/Layout/Layout";
 import { Header } from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
@@ -22,7 +23,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <StyledLayoutContainer>
+      <Layout>
         <Header />
         <Routes>
           <Route path="*" element={<NotFoundPage />} />
@@ -36,23 +37,9 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
-      </StyledLayoutContainer>
+      </Layout>
     </>
   );
 }
-
-const StyledLayoutContainer = styled.div`
-  > * {
-    padding-inline: 1em;
-
-    @media (min-width: 48em) {
-      padding-inline: 2em;
-    }
-
-    @media (min-width: 80em) {
-      padding-inline: calc((100% - 80em) / 2 + 2.5em);
-    }
-  }
-`;
 
 export default App;
