@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 import "./App.css";
@@ -14,6 +15,10 @@ import { About as AboutPage } from "./pages/About";
 const Placeholder = () => <div className="App"></div>;
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => { window.scrollTo(0, 0); }, [location])
+
   return (
     <>
       <GlobalStyles />
