@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const NavbarStyle = styled.div`
   display: flex;
-  justify-content: flex-end;
+  // justify-content: flex-end;
 
   > a {
     margin-top: 1.3vh;
@@ -18,7 +18,7 @@ const MobileView = styled.div`
     display: none;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     .burgermenu-toggle {
       display: fixed;
       padding-top: 10px;
