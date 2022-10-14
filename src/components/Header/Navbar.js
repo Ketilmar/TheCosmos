@@ -13,10 +13,10 @@ const Navbar = () => {
   return (
     <div className="navbar-wrapper">
       <NavbarStyle>
-        <Link to="/">Home</Link>
-        <Link to="/planets">Planets</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/">HOME</Link>
+        <Link to="/planets">PLANETS</Link>
+        <Link to="/about">ABOUT</Link>
+        <Link to="/contact">CONTACT</Link>
       </NavbarStyle>
 
       <MobileView>

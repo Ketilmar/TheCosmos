@@ -21,7 +21,8 @@ const HeaderHider = styled.div`
 
   position: sticky;
   width: 100%;
-  top: 2px;
+  top: 0;
+  z-index: 10;
 
   .header-wrapper {
     transition: all 1s;
