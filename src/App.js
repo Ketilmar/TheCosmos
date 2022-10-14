@@ -14,8 +14,6 @@ import PlanetsPage from "./pages/Planets/Planets";
 import AboutPage from "./pages/About/About";
 import ContactPage from "./pages/Contact/Contact";
 
-const Placeholder = () => <div className="App"></div>;
-
 function App() {
   const location = useLocation();
 
