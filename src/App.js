@@ -8,6 +8,7 @@ import { Header } from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 import NotFoundPage from "./pages/NotFound/NotFound";
+import LandingPage from "./pages/Landing/Landing"
 import BodyPage from "./pages/Body/Body";
 import PlanetsPage from "./pages/Planets/Planets";
 import AboutPage from "./pages/About/About";
@@ -27,10 +28,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="*" element={<NotFoundPage />} />
-          <Route
-            path="/"
-            element={<Placeholder /> /* TODO: Replace with landing page */}
-          />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/planets" element={<PlanetsPage />} />
           <Route path="/body/:id" element={<BodyPage />} />
           <Route path="/about" element={<AboutPage />} />
