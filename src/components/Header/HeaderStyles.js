@@ -7,7 +7,7 @@ const HeaderStyle = styled.div`
   padding-block: 1em;
   background-color: #0f131fc4;
 
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     height: 25vh;
   }
 
