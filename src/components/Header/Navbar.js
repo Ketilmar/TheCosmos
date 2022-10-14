@@ -28,7 +28,7 @@ const Navbar = () => {
       {/* needed to use <style> here because 'burgerOpen' was outside scope with Styled */}
       <style jsx>
         {`
-          @media (max-width: 600px) {
+          @media (max-width: 500px) {
             .navbar-wrapper {
               background-color: none;
               height: 10vh;

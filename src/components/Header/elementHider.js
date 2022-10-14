@@ -23,10 +23,15 @@ const HeaderHider = styled.div`
   width: 100%;
   top: 2px;
 
+  .header-wrapper {
+    transition: all 1s;
+  }
+
   .hide {
     opacity: 0;
     left: -100%;
   }
+
   .show {
     opacity: 1;
     left: 0;
