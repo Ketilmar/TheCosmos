@@ -25,7 +25,7 @@ const HeaderHider = styled.div`
   z-index: 10;
 
   .header-wrapper {
-    transition: all 1s;
+    transition: all 0.5s;
   }
 
   .hide {
