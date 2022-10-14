@@ -17,7 +17,7 @@ const MarsPromo = () => (
     <StyledContentContainer>
       <StyledHeading>Gether information about Mars and its two moons, Phobos and Deimos</StyledHeading>
       <StyledParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</StyledParagraph>
-      <Button isRed to="/body/mars">Explore Mars</Button>
+      <Button $isRed to="/body/mars">Explore Mars</Button>
     </StyledContentContainer>
     <StyledMarsAndMoonsContainer>
       <StyledMars color={colors.mars}/>

@@ -8,11 +8,11 @@ const colors = {
 
 export const StyledButton = styled(Link)`
   display: inline-block;
-  background-color: ${props => props.isRed ? colors.red[0] : colors.blue[0]};
+  background-color: ${props => props.$isRed ? colors.red[0] : colors.blue[0]};
   background: linear-gradient(
     90deg,
-    ${props => props.isRed ? colors.red[0] : colors.blue[0]} 0%,
-    ${props => props.isRed ? colors.red[1] : colors.blue[1]} 100%
+    ${props => props.$isRed ? colors.red[0] : colors.blue[0]} 0%,
+    ${props => props.$isRed ? colors.red[1] : colors.blue[1]} 100%
   );
   color: white;
   font-weight: 500;
