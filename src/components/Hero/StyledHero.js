@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import Button from "../Button/Button";
 import CelestialObject from "../CelestialObject/CelestialObject";
+import { BackgroundSVG } from "./Hero";
 
 export const StyledSection = styled.section`
   position: relative;
@@ -66,4 +67,18 @@ export const StyledMoon = styled(CelestialObject)`
   inset-inline-end: 2em;
   width: 10%;
   height: 10%;
+`
+
+export const StyledWaveBackground = styled.svg`
+  display: none;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: -20;
+  inset-block-end: 0;
+  inset-inline: 0;
+
+  @media (min-width: 48em) {
+    display: block;
+  }
 `
