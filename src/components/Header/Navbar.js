@@ -8,6 +8,7 @@ const Navbar = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const toggleBurger = () => {
     setBurgerOpen(!burgerOpen);
+    // return burgerOpen;
   };
 
   return (
@@ -25,25 +26,12 @@ const Navbar = () => {
         </div>
       </MobileView>
 
-      {/* needed to use <style> here because 'burgerOpen' was outside scope with Styled */}
       <style jsx>
         {`
           @media (max-width: 550px) {
-            .navbar-wrapper {
-              background-color: none;
-              height: 10vh;
-              width: 40vw;
-              display: flex;
-              justify-content: flex-end;
-            }
-
             .navbar-wrapper > div > a {
               display: ${burgerOpen ? "inline" : "none"};
-            }
-
-            .navbar-wrapper > div {
-              flex-direction: column;
-              justify-content: space-between;
+              // color: red;
             }
           }
         `}
