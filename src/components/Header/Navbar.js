@@ -14,10 +14,18 @@ const Navbar = () => {
   return (
     <div className="navbar-wrapper">
       <NavbarStyle>
-        <Link to="/">HOME</Link>
-        <Link to="/planets">PLANETS</Link>
-        <Link to="/about">ABOUT</Link>
-        <Link to="/contact">CONTACT</Link>
+        <Link to="/" onClick={toggleBurger}>
+          HOME
+        </Link>
+        <Link to="/planets" onClick={toggleBurger}>
+          PLANETS
+        </Link>
+        <Link to="/about" onClick={toggleBurger}>
+          ABOUT
+        </Link>
+        <Link to="/contact" onClick={toggleBurger}>
+          CONTACT
+        </Link>
       </NavbarStyle>
 
       <MobileView>
