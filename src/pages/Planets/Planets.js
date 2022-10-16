@@ -13,6 +13,7 @@ const Planets = () => (
       <CelestialObjectCardsContainer>
         {planets.map((planet) => (
           <CelestialObjectCard
+            key={planet.id}
             color={planet.color}
             name={planet.name}
             to={`/body/${planet.id}`}
