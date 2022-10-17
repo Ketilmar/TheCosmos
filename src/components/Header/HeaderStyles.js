@@ -17,6 +17,21 @@ const HeaderStyle = styled.div`
     font-size: large;
     text-decoration: none;
   }
+
+  @media (max-width: 550px) {
+    .navbar-wrapper {
+      background-color: none;
+      height: 10vh;
+      width: 40vw;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .navbar-wrapper > div {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
 `;
 
 export { HeaderStyle };
