@@ -1,45 +1,34 @@
-import { useState, useContext, createContext } from "react";
+import { useState } from "react";
 import { BurgerMenu } from "./BurgerMenu";
 import { NavbarStyle, MobileView } from "./NavbarStyles";
 import { Link } from "react-router-dom";
 
-const StateContext = createContext({
-  useState: false,
-  setBurgerOpen: () => {},
-});
-
-export const useStateContext = () => useContext(StateContext);
-
-// for open/close mobile menu
-const ToggleBurgerMenu = () => {
+const Navbar = () => {
+  // for open/close mobile menu
   const [burgerOpen, setBurgerOpen] = useState(false);
   const toggleBurger = () => {
     setBurgerOpen(!burgerOpen);
-    console.log("TOGGLEBURGER");
   };
-  return [burgerOpen, toggleBurger];
-};
 
-const Navbar = () => {
   return (
     <div className="navbar-wrapper">
       <NavbarStyle>
-        <Link to="/" onClick={ToggleBurgerMenu}>
+        <Link to="/" onClick={toggleBurger}>
           HOME
         </Link>
-        <Link to="/planets" onClick={ToggleBurgerMenu}>
+        <Link to="/planets" onClick={toggleBurger}>
           PLANETS
         </Link>
-        <Link to="/about" onClick={ToggleBurgerMenu}>
+        <Link to="/about" onClick={toggleBurger}>
           ABOUT
         </Link>
-        <Link to="/contact" onClick={ToggleBurgerMenu}>
+        <Link to="/contact" onClick={toggleBurger}>
           CONTACT
         </Link>
       </NavbarStyle>
 
       <MobileView>
-        <div className="burgermenu-toggle" onClick={ToggleBurgerMenu}>
+        <div className="burgermenu-toggle" onClick={toggleBurger}>
           <BurgerMenu />
         </div>
       </MobileView>
